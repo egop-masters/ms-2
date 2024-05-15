@@ -6,8 +6,9 @@ main
 # Ignore the vendor directory (if using vendoring)
 vendor/
 
-# Ignore the Go module cache
-pkg/
+# Ignore Git and other version control system directories
+.git
+.gitignore
 
 # Ignore OS-specific and IDE-specific files
 *.swp
@@ -15,3 +16,6 @@ pkg/
 *.DS_Store
 .vscode/
 .idea/
+
+# Ignore Go module cache
+pkg/
