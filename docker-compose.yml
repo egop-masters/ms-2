@@ -1,5 +1,9 @@
 ﻿version: "3"
 
+networks:
+  masters:
+    external: true
+
 services:
   ms-2:
     image: ms-2
@@ -8,3 +12,5 @@ services:
       dockerfile: Dockerfile
     ports:
       - "81:8080"
+    networks:
+      - masters
