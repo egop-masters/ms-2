@@ -28,10 +28,10 @@ func main() {
 
     // Define the GET endpoint
     r.GET("/metrics", gin.WrapH(promhttp.Handler()))
-    r.GET("/your-endpoint", func(c *gin.Context) {
+    r.GET("/test-endpoint", func(c *gin.Context) {
         path := c.FullPath()
         requestCount.WithLabelValues(path).Inc()
-        c.String(http.StatusOK, "Hello, World!")
+        c.String(http.StatusOK, "Hello from ms-2!")
     })
 
     // Run the server
