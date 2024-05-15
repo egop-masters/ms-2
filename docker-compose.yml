@@ -1,0 +1,10 @@
+﻿version: "3"
+
+services:
+  ms-1:
+    image: ms-2
+    build:
+      context: ms-2
+      dockerfile: Dockerfile
+    ports:
+      - "81:8080"
